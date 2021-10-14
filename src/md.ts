@@ -1,13 +1,7 @@
 import { color } from './colors';
+import { Options } from './model';
 
-export type MDOptions = {
-    bold?: boolean;
-    italic?: boolean;
-    mono?: boolean;
-    link?: string;
-};
-
-export function markdown(text: string, options: MDOptions): string {
+export function markdown(text: string, options: Options): string {
     let result = text;
     if (options) {
         if (options.bold) {

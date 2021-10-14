@@ -1,16 +1,16 @@
 import { style } from './style';
-import { contrast, fontColors } from './model';
+import { contrast, FontColors, fontColors } from './model';
 
 console.log('colors:');
 console.log(style('red text', { font: 'red' }));
 console.log(style('green text', { font: 'green' }));
 console.log(style('blue text', { font: 'blue' }));
 console.log('\nall colors:');
-const isColor = (name: string): boolean => fontColors.hasOwnProperty(name);
-const colorList = Object.keys(fontColors).filter(isColor);
+const isColor = (name: string): name is FontColors => fontColors.hasOwnProperty(name);
+const colorList =  Object.keys(fontColors).filter(isColor);
 console.log(
     Array.from('Message of all colors')
-        .map((char, i) => {
+        .map((char: string, i: number) => {
             const font = colorList[i % colorList.length];
             return style(char, { font, background: contrast[font] });
         })
