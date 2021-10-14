@@ -2,12 +2,12 @@
   "name": "shri-ts-2021-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-specifier-resolution=node --experimental-modules src/test.js",
+    "test": "node --experimental-specifier-resolution=node --experimental-modules raw/test.js",
     "test-ts": "node --experimental-specifier-resolution=node --experimental-modules dist/test.js",
-    "compare": "prettier --write raw; prettier --write dist;",
+    "compare": "prettier --write raw/test.js prettier --write dist/test.js",
     "build": "npx tsc"
   },
   "author": "",

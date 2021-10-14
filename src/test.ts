@@ -1,6 +1,5 @@
 import { style } from './style';
 import { contrast, fontColors } from './model';
-import { MDOptions } from './md';
 
 console.log('colors:');
 console.log(style('red text', { font: 'red' }));
